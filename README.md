@@ -1,3 +1,3 @@
-# Blank JavaScript project
+# Blank React Project
 
-Add README here.
+With only `react`, `react-dom`, and ESLint packages (with recommended configuration).
