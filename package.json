@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "website-next",
+  "description": "Zaim's website, built with Next.js",
   "author": "Zaim Bakar <zaim@eml.cc>",
   "version": "0.1.0",
   "license": "MIT",
