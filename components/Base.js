@@ -1,12 +1,21 @@
 import styled from "@emotion/styled";
 import shouldForwardProp from "@styled-system/should-forward-prop";
-import { space, layout, typography, color, flexbox, grid } from "styled-system";
+import {
+  color,
+  flexbox,
+  grid,
+  layout,
+  position,
+  space,
+  typography
+} from "styled-system";
 
 const Box = styled("div", { shouldForwardProp })(
   color,
   flexbox,
   grid,
   layout,
+  position,
   space,
   typography
 );
