@@ -6,7 +6,7 @@ module.exports = withPlugins([
     optimizedImages,
     {
       svgo: {
-        removeViewBox: false
+        plugins: [{ removeViewBox: false }]
       }
     }
   ]
