@@ -1,14 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "emotion-theming";
+import { MDXProvider } from "@mdx-js/react";
+import Base from "../components/Base";
 import theme from "../settings/theme";
 
 import "sanitize.css/sanitize.css";
 
+function MDXWrapper({ children, meta }) {
+  return (
+    <Base px={[3, 6, 7]}>
+      <article title={meta.title}>
+        <header>
+          <h1>{meta.title}</h1>
+        </header>
+        {children}
+      </article>
+    </Base>
+  );
+}
+
+MDXWrapper.propTypes = {
+  children: PropTypes.element,
+  meta: PropTypes.object
+};
+
 function SiteApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <MDXProvider components={{ wrapper: MDXWrapper }}>
+        <Component {...pageProps} />
+      </MDXProvider>
     </ThemeProvider>
   );
 }
