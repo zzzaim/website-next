@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="247.86055"
-     inkscape:cy="642.25636"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-57.88037"
+     inkscape:cy="735.20391"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,7 +39,8 @@
      inkscape:window-x="2"
      inkscape:window-y="29"
      inkscape:window-maximized="0"
-     showguides="false" />
+     showguides="false"
+     inkscape:snap-page="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -112,6 +113,14 @@
        height="39.701088"
        x="109.09647"
        y="549.01227" />
+    <rect
+       style="opacity:1;fill:#eee8aa;fill-opacity:0.50909089;stroke:none;stroke-width:4.41604376;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect918"
+       width="217.18279"
+       height="198.4046"
+       x="646.39679"
+       y="134.20236"
+       transform="matrix(1,0,0.57171515,0.82045219,0,0)" />
   </g>
   <g
      inkscape:groupmode="layer"
