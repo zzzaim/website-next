@@ -13,6 +13,10 @@ const Body = styled.body`
   background-image: url("${dot}");
   background-repeat: repeat;
   background-blend-mode: luminosity;
+
+  a, a:visited {
+    color: black;
+  }
 `;
 
 class SiteDocument extends Document {
