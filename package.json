@@ -17,6 +17,7 @@
     "@mdx-js/react": "^1.5.5",
     "@next/mdx": "^9.2.1",
     "@styled-system/should-forward-prop": "^5.1.4",
+    "@styled-system/theme-get": "^5.1.2",
     "emotion-theming": "^10.0.27",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
@@ -26,7 +27,9 @@
     "next-optimized-images": "^2.5.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "remark-attr": "^0.9.0",
     "sanitize.css": "^11.0.0",
+    "shevyjs": "^1.1.0",
     "styled-system": "^5.1.4"
   },
   "devDependencies": {

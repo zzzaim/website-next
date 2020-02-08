@@ -20,8 +20,8 @@ function GoogleFonts({ fonts }) {
   return (
     <link
       href={`https://fonts.googleapis.com/css?family=${fontStr}&display=swap`}
-      type="text/css"
       rel="stylesheet"
+      type="text/css"
     />
   );
 }

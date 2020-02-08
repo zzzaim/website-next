@@ -17,7 +17,11 @@ SocialLink.propTypes = {
 };
 
 export const TwitterLink = ({ name, ...props }) => (
-  <SocialLink href={`https://twitter.com/${name}`} icon={twitter} {...props} />
+  <SocialLink
+    href={`https://twitter.com/${name}`}
+    icon={twitter}
+    {...props}
+  />
 );
 
 TwitterLink.propTypes = { name: PropTypes.string };

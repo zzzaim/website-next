@@ -1,37 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Router from "next/router";
+import styled from "@emotion/styled";
+import { themeGet } from "@styled-system/theme-get";
 import { ThemeProvider } from "emotion-theming";
 import { MDXProvider } from "@mdx-js/react";
-import Base from "../components/Base";
+import Styled from "../components/Styled";
+import { components } from "../components/Article";
 import theme from "../settings/theme";
 import * as gtag from "../settings/gtag";
 
 import "sanitize.css/sanitize.css";
 
-function MDXWrapper({ children, meta }) {
-  return (
-    <Base px={[3, 6, 7]}>
-      <article title={meta.title}>
-        <header>
-          <h1>{meta.title}</h1>
-        </header>
-        {children}
-      </article>
-    </Base>
-  );
-}
+const Main = styled(Styled)`
+  font-size: ${themeGet("typography.baseFontSize", "18px")};
 
-MDXWrapper.propTypes = {
-  children: PropTypes.element,
-  meta: PropTypes.object
-};
+  a,
+  a:visited {
+    color: ${themeGet("colors.link", "black")};
+  }
+`;
 
 function SiteApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <MDXProvider components={{ wrapper: MDXWrapper }}>
-        <Component {...pageProps} />
+      <MDXProvider components={components}>
+        <Main
+          as="main"
+          bg="bg"
+          color="text"
+          fontFamily="sans"
+          minHeight="100vh"
+        >
+          <Component {...pageProps} />
+        </Main>
       </MDXProvider>
     </ThemeProvider>
   );

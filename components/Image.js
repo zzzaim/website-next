@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import Base from "./Base";
+import Styled from "./Styled";
 
-export const Container = styled(Base)`
+export const Container = styled(Styled)`
   display: ${props => (props.inline ? "inline-" : "") + "block"};
   position: relative;
 

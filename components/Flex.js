@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import Box from "./Box";
+import Styled from "./Styled";
 
-const Flex = styled(Box)({
+const Flex = styled(Styled)({
   display: "flex"
 });
 

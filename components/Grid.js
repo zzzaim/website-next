@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import Box from "./Box";
+import Styled from "./Styled";
 
-const Grid = styled(Box)({
+const Grid = styled(Styled)({
   display: "grid"
 });
 
-Grid.Item = Box;
+Grid.Item = Styled;
 
 export default Grid;

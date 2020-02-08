@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 function GoogleAnalytics({ id }) {
   return (
     <React.Fragment>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: `

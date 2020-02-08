@@ -1,9 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import Box from "../components/Box";
+import Styled from "../components/Styled";
 import Grid from "../components/Grid";
 import { Svg } from "../components/Image";
-import { TwitterLink, GitHubLink, MediumLink } from "../components/SocialLink";
+import {
+  TwitterLink,
+  GitHubLink,
+  MediumLink
+} from "../components/SocialLink";
+import dot from "../images/dot.svg";
 import drawing from "../images/drawing.svg?include";
 
 function IndexPage() {
@@ -14,16 +19,18 @@ function IndexPage() {
       </Head>
       <Grid
         alignItems="center"
+        as="section"
+        backgroundImage={`url("${dot}")`}
         gridTemplateColumns={["100%", "repeat(2, 50%)"]}
         gridTemplateRows={["repeat(2, 50%)", "100%"]}
         justifyItems="center"
         minHeight="100vh"
       >
         <Grid.Item textAlign={["center", "left"]}>
-          <Box as="h1" fontFamily="main" fontSize={[6, 7, 8]} mb={0}>
+          <Styled as="h1" fontFamily="sans" fontSize={[6, 7, 8]} mb={0}>
             Zaim Bakar
-          </Box>
-          <Box
+          </Styled>
+          <Styled
             as="h2"
             fontFamily="monospace"
             fontSize={[4, 5, 6]}
@@ -35,13 +42,13 @@ function IndexPage() {
             Programmer
             <br />
             Designer
-          </Box>
+          </Styled>
           <TwitterLink m={3} name="zzzaim" />
           <GitHubLink m={3} name="zzzaim" />
           <MediumLink m={3} name="zzzaim" />
         </Grid.Item>
         <Grid.Item>
-          <Svg maxWidth={["300px", "450px", "500px"]} xml={drawing} />
+          <Svg width={["300px", "450px", "500px"]} xml={drawing} />
         </Grid.Item>
       </Grid>
     </React.Fragment>
