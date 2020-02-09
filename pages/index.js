@@ -1,14 +1,28 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Head from "next/head";
+import Link from "next/link";
 import Styled from "../components/Styled";
 import Grid from "../components/Grid";
 import { Svg } from "../components/Image";
-import {
-  TwitterLink,
-  GitHubLink,
-  MediumLink
-} from "../components/SocialLink";
+import blog from "@fortawesome/fontawesome-free/svgs/solid/blog.svg?include";
+import twitter from "@fortawesome/fontawesome-free/svgs/brands/twitter.svg?include";
+import github from "@fortawesome/fontawesome-free/svgs/brands/github.svg?include";
+import dot from "../images/dot.svg";
 import drawing from "../images/drawing.svg?include";
+
+function IconLink({ href, icon }) {
+  return (
+    <Styled as="a" display="inline-block" href={href}>
+      <Svg mr="2em" width="2em" xml={icon} />
+    </Styled>
+  );
+}
+
+IconLink.propTypes = {
+  href: PropTypes.string,
+  icon: PropTypes.string
+};
 
 function IndexPage() {
   return (
@@ -19,6 +33,7 @@ function IndexPage() {
       <Grid
         alignItems="center"
         as="section"
+        backgroundImage={`url("${dot}")`}
         gridTemplateColumns={["100%", "repeat(2, 50%)"]}
         gridTemplateRows={["repeat(2, 50%)", "100%"]}
         justifyItems="center"
@@ -41,9 +56,15 @@ function IndexPage() {
             <br />
             Designer
           </Styled>
-          <TwitterLink m={3} name="zzzaim" />
-          <GitHubLink m={3} name="zzzaim" />
-          <MediumLink m={3} name="zzzaim" />
+          <IconLink href="https://twitter.com/zzzaim" icon={twitter} />
+          <IconLink href="https://github.com/zzzaim" icon={github} />
+          <Link href="/blog">
+            {/* eslint-disable jsx-a11y/anchor-is-valid */}
+            <a style={{ display: "inline-block" }}>
+              <Svg width="2em" xml={blog} />
+            </a>
+            {/* eslint-enable jsx-a11y/anchor-is-valid */}
+          </Link>
         </Grid.Item>
         <Grid.Item>
           <Svg width={["300px", "450px", "500px"]} xml={drawing} />

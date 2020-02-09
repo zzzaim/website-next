@@ -15,16 +15,25 @@ export const Container = styled(Styled)`
   }
 `;
 
-export const Img = ({ src, alt, ...containerProps }) => (
-  <Container {...containerProps}>
-    <img alt={alt} src={src} />
+export const Img = ({ src, srcSet, alt, ...containerProps }) => (
+  <Container as="figure" m={0} {...containerProps}>
+    <img alt={alt} src={src} srcSet={srcSet} />
   </Container>
 );
 
-Img.propTypes = { src: PropTypes.string, alt: PropTypes.string };
+Img.propTypes = {
+  src: PropTypes.string,
+  srcSet: PropTypes.string,
+  alt: PropTypes.string
+};
 
 export const Svg = ({ xml, ...containerProps }) => (
-  <Container dangerouslySetInnerHTML={{ __html: xml }} {...containerProps} />
+  <Container
+    as="figure"
+    dangerouslySetInnerHTML={{ __html: xml }}
+    m={0}
+    {...containerProps}
+  />
 );
 
 Svg.propTypes = { xml: PropTypes.string };

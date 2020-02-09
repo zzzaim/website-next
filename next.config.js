@@ -10,6 +10,11 @@ module.exports = withPlugins(
       {
         svgo: {
           plugins: [{ removeViewBox: false }]
+        },
+        responsive: {
+          min: 800,
+          max: 1920,
+          steps: 4
         }
       }
     ],
@@ -19,5 +24,7 @@ module.exports = withPlugins(
       }
     })
   ],
-  { pageExtensions: ["js", "mdx"] }
+  {
+    pageExtensions: ["js", "mdx"]
+  }
 );

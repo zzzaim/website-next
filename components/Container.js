@@ -5,7 +5,7 @@ function Container(props) {
   return (
     <Styled
       as="section"
-      maxWidth={["none", "48em", "52em"]}
+      maxWidth={["none", "48em"]}
       mx="auto"
       p={3}
       {...props}

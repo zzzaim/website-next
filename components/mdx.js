@@ -5,6 +5,7 @@ import Shevy from "shevyjs";
 import format from "date-fns/format";
 import parseISO from "date-fns/parseISO";
 import Head from "next/head";
+import { Img } from "../components/Image";
 import Container from "../components/Container";
 import Styled from "../components/Styled";
 import Flex from "../components/Flex";
@@ -13,12 +14,34 @@ import theme from "../settings/theme";
 export const shevy = new Shevy(theme.typography);
 
 const wrapper = ({ children, meta }) => (
-  <Container>
+  <Container pt={4}>
     <Head>
       <title>{meta.title}</title>
+      <meta content={meta.title} key="og:title" property="og:title" />
+      <meta content="article" key="og:type" property="og:type" />
+      <meta content="" key="og:url" property="og:url" />
+      {((meta.image && meta.image.images) || []).map((img, n) => (
+        <React.Fragment key={n}>
+          <meta
+            content={img.path}
+            key={`og:image:${n}`}
+            property="og:image"
+          />
+          <meta
+            content={img.width}
+            key={`og:image:width:${n}`}
+            property="og:image:width"
+          />
+          <meta
+            content={img.height}
+            key={`og:image:height:${n}`}
+            property="og:image:height"
+          />
+        </React.Fragment>
+      ))}
     </Head>
     <article>
-      <Styled as="header" p={3}>
+      <Styled as="header" mb={4}>
         <Styled as="h1" fontFamily="heading" mt={0} {...shevy.h1}>
           {meta.title}
         </Styled>
@@ -36,9 +59,7 @@ const wrapper = ({ children, meta }) => (
           </Styled>
         </Flex>
       </Styled>
-      <Styled bg="white" p={3}>
-        {children}
-      </Styled>
+      <Styled>{children}</Styled>
     </article>
   </Container>
 );
@@ -52,6 +73,16 @@ const p = styled.p(shevy.content);
 
 const li = styled.li(shevy.content);
 
+const img = ({ src, srcSet, alt }) => (
+  <Img alt={alt} mb={shevy.baseSpacing(1)} src={src} srcSet={srcSet} />
+);
+
+img.propTypes = {
+  src: PropTypes.string,
+  srcSet: PropTypes.string,
+  alt: PropTypes.string
+};
+
 const aside = styled.aside(shevy.content, { fontStyle: "italic" });
 
 const blockquote = props => (
@@ -61,6 +92,7 @@ const blockquote = props => (
 const components = {
   p,
   li,
+  img,
   aside,
   blockquote,
   wrapper

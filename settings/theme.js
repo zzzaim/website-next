@@ -1,6 +1,6 @@
 const fontsFromGoogle = {
   sans: {
-    name: "Nunito Sans",
+    name: "Arimo",
     styles: [400, 700]
   },
   serif: {
@@ -18,7 +18,7 @@ export default {
   fonts: {
     sans: fontsFromGoogle.sans.name,
     serif: fontsFromGoogle.serif.name,
-    heading: fontsFromGoogle.serif.name,
+    heading: fontsFromGoogle.sans.name,
     monospace: fontsFromGoogle.monospace.name
   },
 

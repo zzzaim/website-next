@@ -9,7 +9,6 @@ import Styled from "../components/Styled";
 import components from "../components/mdx";
 import theme from "../settings/theme";
 import * as gtag from "../settings/gtag";
-import dot from "../images/dot.svg";
 
 import "sanitize.css/sanitize.css";
 
@@ -28,7 +27,6 @@ function SiteApp({ Component, pageProps }) {
       <MDXProvider components={components}>
         <Main
           as="main"
-          backgroundImage={`url("${dot}")`}
           bg="bg"
           color="text"
           fontFamily="sans"
