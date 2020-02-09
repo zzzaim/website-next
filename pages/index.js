@@ -8,7 +8,6 @@ import {
   GitHubLink,
   MediumLink
 } from "../components/SocialLink";
-import dot from "../images/dot.svg";
 import drawing from "../images/drawing.svg?include";
 
 function IndexPage() {
@@ -20,7 +19,6 @@ function IndexPage() {
       <Grid
         alignItems="center"
         as="section"
-        backgroundImage={`url("${dot}")`}
         gridTemplateColumns={["100%", "repeat(2, 50%)"]}
         gridTemplateRows={["repeat(2, 50%)", "100%"]}
         justifyItems="center"

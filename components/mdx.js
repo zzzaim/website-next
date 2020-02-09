@@ -2,22 +2,45 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Shevy from "shevyjs";
+import format from "date-fns/format";
+import parseISO from "date-fns/parseISO";
+import Head from "next/head";
+import Container from "../components/Container";
 import Styled from "../components/Styled";
+import Flex from "../components/Flex";
 import theme from "../settings/theme";
 
 export const shevy = new Shevy(theme.typography);
 
 const wrapper = ({ children, meta }) => (
-  <Styled as="section" maxWidth={["none", "48em", "52em"]} mx="auto" p={4}>
+  <Container>
+    <Head>
+      <title>{meta.title}</title>
+    </Head>
     <article>
-      <header>
+      <Styled as="header" p={3}>
         <Styled as="h1" fontFamily="heading" mt={0} {...shevy.h1}>
           {meta.title}
         </Styled>
-      </header>
-      {children}
+        <Flex flexWrap="wrap" justifyContent="space-between">
+          <Styled>
+            {"by "}
+            <a href="/" rel="author">
+              Zaim Bakar
+            </a>
+          </Styled>
+          <Styled>
+            <time dateTime={meta.publishDate}>
+              {format(parseISO(meta.publishDate), "d MMM yyyy")}
+            </time>
+          </Styled>
+        </Flex>
+      </Styled>
+      <Styled bg="white" p={3}>
+        {children}
+      </Styled>
     </article>
-  </Styled>
+  </Container>
 );
 
 wrapper.propTypes = {
