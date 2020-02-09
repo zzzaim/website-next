@@ -6,7 +6,7 @@ import { themeGet } from "@styled-system/theme-get";
 import { ThemeProvider } from "emotion-theming";
 import { MDXProvider } from "@mdx-js/react";
 import Styled from "../components/Styled";
-import { components } from "../components/Article";
+import components from "../components/mdx";
 import theme from "../settings/theme";
 import * as gtag from "../settings/gtag";
 
