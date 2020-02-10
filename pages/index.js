@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Head from "next/head";
 import Link from "next/link";
 import Styled from "../components/Styled";
 import Grid from "../components/Grid";
+import Icon from "../components/Icon";
 import { Svg } from "../components/Image";
 import blog from "@fortawesome/fontawesome-free/svgs/solid/blog.svg?include";
 import twitter from "@fortawesome/fontawesome-free/svgs/brands/twitter.svg?include";
@@ -11,18 +11,18 @@ import github from "@fortawesome/fontawesome-free/svgs/brands/github.svg?include
 import dot from "../images/dot.svg";
 import drawing from "../images/drawing.svg?include";
 
-function IconLink({ href, icon }) {
-  return (
-    <Styled as="a" display="inline-block" href={href}>
-      <Svg mr="2em" width="2em" xml={icon} />
-    </Styled>
-  );
-}
-
-IconLink.propTypes = {
-  href: PropTypes.string,
-  icon: PropTypes.string
-};
+//function IconLink({ href, icon }) {
+//  return (
+//    <Styled as="a" display="inline-block" href={href}>
+//      <Svg mr="2em" width="2em" xml={icon} />
+//    </Styled>
+//  );
+//}
+//
+//IconLink.propTypes = {
+//  href: PropTypes.string,
+//  icon: PropTypes.string
+//};
 
 function IndexPage() {
   return (
@@ -56,8 +56,8 @@ function IndexPage() {
             <br />
             Designer
           </Styled>
-          <IconLink href="https://twitter.com/zzzaim" icon={twitter} />
-          <IconLink href="https://github.com/zzzaim" icon={github} />
+          <Icon as="a" href="https://twitter.com/zzzaim" icon={twitter} />
+          <Icon as="a" href="https://github.com/zzzaim" icon={github} />
           <Link href="/blog">
             {/* eslint-disable jsx-a11y/anchor-is-valid */}
             <a style={{ display: "inline-block" }}>

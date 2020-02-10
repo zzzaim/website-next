@@ -25,7 +25,8 @@ export default {
   colors: {
     bg: "seashell",
     text: "black",
-    link: "black"
+    link: "black",
+    twitter: "#1DA1F2"
   },
 
   borders: {

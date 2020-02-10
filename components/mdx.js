@@ -9,7 +9,9 @@ import { Img } from "../components/Image";
 import Container from "../components/Container";
 import Styled from "../components/Styled";
 import Flex from "../components/Flex";
+import Icon from "../components/Icon";
 import theme from "../settings/theme";
+import twitter from "@fortawesome/fontawesome-free/svgs/brands/twitter.svg?include";
 
 export const shevy = new Shevy(theme.typography);
 
@@ -51,11 +53,19 @@ const wrapper = ({ children, meta }) => (
             <a href="/" rel="author">
               Zaim Bakar
             </a>
-          </Styled>
-          <Styled>
+            {" / "}
             <time dateTime={meta.publishDate}>
               {format(parseISO(meta.publishDate), "d MMM yyyy")}
             </time>
+          </Styled>
+          <Styled>
+            <Icon
+              as="a"
+              href="https://twitter.com/intent/tweet"
+              icon={twitter}
+              style={{ mr: "0", width: "1.25em", color: "twitter" }}
+              target="_blank"
+            />
           </Styled>
         </Flex>
       </Styled>
