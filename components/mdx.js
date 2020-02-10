@@ -71,7 +71,7 @@ wrapper.propTypes = {
 
 const p = styled.p(shevy.content);
 
-const li = styled.li(shevy.content);
+const li = styled.li(shevy.content, { marginBottom: shevy.baseSpacing(0.5) });
 
 const img = ({ src, srcSet, alt }) => (
   <Img alt={alt} mb={shevy.baseSpacing(1)} src={src} srcSet={srcSet} />
