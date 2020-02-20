@@ -14,7 +14,7 @@
     "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@mdx-js/loader": "^1.5.5",
-    "@mdx-js/react": "^1.5.5",
+    "@mdx-js/react": "^1.5.6",
     "@next/mdx": "^9.2.1",
     "@styled-system/should-forward-prop": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
