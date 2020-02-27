@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
+    "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@mdx-js/loader": "^1.5.7",
